@@ -1,8 +1,8 @@
 ---
-title: "Spectral_signatures Using the bis620.2023 package"
+title: "Spectral_signatures"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{spectral_signatures}
+  %\VignetteIndexEntry{Spectral_signatures}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
