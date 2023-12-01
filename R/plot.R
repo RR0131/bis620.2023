@@ -18,3 +18,11 @@ plot_accel = function(x, x_var = "time"){
     facet_grid(Channel~.)
 }
 
+plot.spec_sig = function(x, y, ...) {
+  x|>
+    pivot_longer(-freq, values_to = "Acceleration", names_to = "Channel") |>
+    #ggplot(aes_string(x= x_var, y = "Acceleration")) +
+    ggplot(aes(x = freq, y = Acceleration)) +
+    geom_line() +
+    facet_grid(Channel~.)
+}

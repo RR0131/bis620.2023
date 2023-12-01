@@ -31,6 +31,7 @@ spectral_signature = function(x, take_log = FALSE, inverse = TRUE) {
   xt = x$time[1:2]
   shortest_period = as.numeric(difftime(max(xt), min(xt), units = "secs"))
   ret$freq = 1/seq(longest_period, shortest_period, length.out = nrow(ret))
+  class(ret) = c("spec_sig",class(ret))
   ret
 }
 
