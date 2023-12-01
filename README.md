@@ -8,6 +8,11 @@
 [![R-CMD-check](https://github.com/RR0131/bis620.2023/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RR0131/bis620.2023/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+<!-- badges: start -->
+
+[![test-coverage](https://github.com/RR0131/bis620.2023/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/RR0131/bis620.2023/actions/workflows/test-coverage.yaml)
+<!-- badges: end -->
+
 The goal of bis620.2023 is to open Shiny app.
 
 ## Installation
@@ -22,13 +27,13 @@ devtools::install_github("RR0131/bis620.2023")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a example which shows you how to launch shiny app:
 
 ``` r
 library(bis620.2023)
-accel |> 
-  head(100) |> 
-  plot_accel()
+run <- function(){
+  app <- system.file("App", package = "bis620.2023")
+  shiny::runApp(app)
+}
+run()
 ```
-
-<img src="man/figures/README-example-1.png" width="100%" />

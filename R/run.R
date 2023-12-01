@@ -1,3 +1,5 @@
+#' this function run the app
+#' @return a shiny app
 #' @export
 
 run <- function(){
